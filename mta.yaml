@@ -1,0 +1,16 @@
+ID: hello-mta
+_schema-version: "3.2"
+version: 1.0.0
+
+modules:
+  - name: hello-world
+    type: nodejs
+    path: hello-world
+    build-parameters:
+      builder: npm
+      commands:
+        - npm install
+        - npm run build
+    parameters:
+      memory: 128M
+    requires: []
